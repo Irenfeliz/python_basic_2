@@ -1,7 +1,16 @@
-n = int(input())
-l = []
-for i in range(n):
-    k = int(input())
-    l.append(k)
-del l[1::2]
-print(l)
+numbers = [int(input()) for _ in range(int(input()))]
+result = []
+
+for num in numbers:
+    if num < 0:
+        result.append(num)
+
+for num in numbers:
+    if num == 0:
+        result.append(num)
+
+for num in numbers:
+    if num > 0:
+        result.append(num)
+
+print(*result, sep='\n')
