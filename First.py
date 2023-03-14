@@ -1,7 +1,8 @@
-n = int(input())
-l = []
-for i in range(n):
-    k = int(input())
-    l.append(k)
-del l[1::2]
-print(l)
+s = input()
+numbers = s.split()
+for i in range(len(numbers)):
+    numbers[i] = int(numbers[i])
+numbers.sort()
+print(*numbers)
+numbers.sort(reverse=True)
+print(*numbers)
